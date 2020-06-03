@@ -1,6 +1,9 @@
 import Head from "next/head";
 import ProductImage from "../components/productComponent/productImage";
 import SideImagesContainer from "../components/productComponent/sideImagesContainer";
+import Quantity from "../components/productComponent/quantity";
+import ButtonPrimary from "../components/buttons/primaryButton";
+import ProductList from "../components/cotainers/productLishContainer";
 
 const ProductPage = () => {
   return (
@@ -10,7 +13,7 @@ const ProductPage = () => {
         <script src="/assets/js/swiper-custom.js"></script>
       </Head>
       <section id="product-show">
-        <div className="container">
+        <div className="container pb-5">
           <div className="row position-relative">
             {/* <!-- product image --> */}
             <div className="col-12 col-md-6">
@@ -45,34 +48,7 @@ const ProductPage = () => {
               {/* <!--==================== detils end =====================-->
   
               <!--==================== Quantity =====================--> */}
-              <div className="px-md-4 px-1">
-                <div
-                  className="btn-group quantity-box overflow-hidden"
-                  role="group"
-                  aria-label="Basic example"
-                >
-                  {/* <!-- less btn --> */}
-                  <button
-                    type="button"
-                    className="quantity-btn paragraph-text bg-light-grey border-0"
-                  >
-                    <i className="flaticon-worldwide"></i>
-                  </button>
-
-                  {/* <!-- paragraph text --> */}
-                  <div className="px-2 d-flex justify-content-center align-items-center border-0 bg-light-grey-2">
-                    <p className="paragraph-text mb-0">Quantity</p>
-                  </div>
-
-                  {/* <!-- add button --> */}
-                  <button
-                    type="button"
-                    className="quantity-btn paragraph-text bg-light-grey border-0"
-                  >
-                    <i className="flaticon-worldwide"></i>
-                  </button>
-                </div>
-              </div>
+              <Quantity />
               {/* <!--==================== Quantity end =====================-->
   
               <!--==================== Color =====================--> */}
@@ -93,16 +69,31 @@ const ProductPage = () => {
                 {/* <!--==================== Color end =====================-->
   
               <!--==================== Button  =====================--> */}
-                <div className="px-md-4 px-1 text-center text-md-left">
-                  <a href="#" className="btn btn-big btn-primary mt-5">
-                    Add To Cart
-                  </a>
+                <div className="text-center text-md-left">
+                  <ButtonPrimary btnSize="btn-big">Add To Cart</ButtonPrimary>
                 </div>
                 {/* <!--==================== Button end =====================--> */}
               </div>
             </div>
           </div>
         </div>
+
+        <ProductList title="Similar items you may like" />
+
+        <style jsx>{`
+          #product-show {
+            margin-top: 50px;
+          }
+
+          @media screen and (max-width: 767px) {
+            #product-show {
+              margin-top: 20px;
+            }
+          }
+          .price {
+            text-decoration: line-through !important;
+          }
+        `}</style>
       </section>
     </>
   );
