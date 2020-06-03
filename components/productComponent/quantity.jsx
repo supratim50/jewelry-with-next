@@ -13,7 +13,7 @@ const Quantity = () => {
   };
 
   return (
-    <div className="px-md-4 px-1">
+    <div>
       <div
         className="btn-group quantity-box overflow-hidden"
         role="group"

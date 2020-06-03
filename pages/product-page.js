@@ -1,9 +1,11 @@
 import Head from "next/head";
+
 import ProductImage from "../components/productComponent/productImage";
 import SideImagesContainer from "../components/productComponent/sideImagesContainer";
 import Quantity from "../components/productComponent/quantity";
 import ButtonPrimary from "../components/buttons/primaryButton";
 import ProductList from "../components/cotainers/productLishContainer";
+import ColorPalat from "../components/productComponent/colorPalat";
 
 const ProductPage = () => {
   return (
@@ -29,7 +31,7 @@ const ProductPage = () => {
             {/* <!-- product-details --> */}
             <div className="col-12 col-md-6 px-md-4 px-2">
               {/* <!--================= details ===================--> */}
-              <div className="details py-3 px-md-4 px-1 d-flex flex-md-column justify-content-between self-sligns-center">
+              <div className="details py-3  d-flex flex-md-column justify-content-between self-sligns-center">
                 <div>
                   <h1 className="heading heading-primary-lg font-weight-bold mb-1 text-truncate">
                     Gold Crown
@@ -52,28 +54,14 @@ const ProductPage = () => {
               {/* <!--==================== Quantity end =====================-->
   
               <!--==================== Color =====================--> */}
-              <div className="px-md-4 px-1 mt-3 color-main-box">
-                <div className="color-box py-1 shadow-sm bg-secondary d-inline-block">
-                  {/* <!-- d-inline-block border d-flex justify-content-start align-items-center --> */}
-                  <button className="color-btn border rounded-circle shadow-sm border-0 d-inline-block">
-                    <i className="flaticon-email text-dark paragrph-text p-0"></i>
-                  </button>
-
-                  {/* <!-- colors --> */}
-                  <div className="color-border-box color d-flex justify-content-start align-items-center ml-3">
-                    <div className="color-border p-1 rounded-circle mr-2 d-inline-block">
-                      <div className="color-fill w-100 h-100 rounded-circle"></div>
-                    </div>
-                  </div>
-                </div>
-                {/* <!--==================== Color end =====================-->
+              <ColorPalat />
+              {/* <!--==================== Color end =====================-->
   
               <!--==================== Button  =====================--> */}
-                <div className="text-center text-md-left">
-                  <ButtonPrimary btnSize="btn-big">Add To Cart</ButtonPrimary>
-                </div>
-                {/* <!--==================== Button end =====================--> */}
+              <div className="text-center text-md-left">
+                <ButtonPrimary btnSize="btn-big">Add To Cart</ButtonPrimary>
               </div>
+              {/* <!--==================== Button end =====================--> */}
             </div>
           </div>
         </div>

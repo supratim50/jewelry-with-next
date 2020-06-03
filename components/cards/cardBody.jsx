@@ -1,6 +1,10 @@
-const CardBody = ({ children }) => {
+const CardBody = ({ children, classList }) => {
   return (
-    <div className="detail-box p-3 px-3 mt-2 mt-md-4 w-100 bg-secondary rounded-lg shadow-sm d-flex flex-column align-items-start justify-content-center">
+    <div
+      className={`detail-box p-3 px-3 mt-2 mt-md-4 w-100 bg-secondary rounded-lg shadow-sm ${
+        classList && classList
+      }`}
+    >
       {children}
       <style jsx>{`
         .detail-box {

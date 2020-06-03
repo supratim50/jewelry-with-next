@@ -22,6 +22,9 @@ const RoundButton = ({ children, classList }) => {
           border-radius: 50%;
         }
 
+        .no-shadow {
+          box-shadow: none !important;
+        }
         @media screen and (max-width: 767px) {
           .btn-round {
             width: 30px;

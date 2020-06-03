@@ -6,15 +6,15 @@ export default function CardTwo({ imageURL, heading, subHeading }) {
           <div className="card-image-box overflow-hidden position-relative">
             <img
               className="card-img-top card-image"
-              src={`${imageURL}`}
+              src={`${imageURL && imageURL}`}
               alt="Card image cap"
             />
             <div className="image-overflow d-flex flex-column justify-content-center align-items-center">
               <h1 className="heading heading-primary text-secondary text-center">
-                {heading}
+                {heading && heading}
               </h1>
               <p className="paragraph-text text-secondary text-center mb-0">
-                {subHeading}
+                {subHeading && subHeading}
               </p>
             </div>
           </div>

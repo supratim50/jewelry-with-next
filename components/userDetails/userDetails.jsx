@@ -14,7 +14,9 @@ const UserDetails = ({ children, catagory }) => {
           Change
         </a>
       </div>
-      <CardBody>{children}</CardBody>
+      <CardBody classList="d-flex flex-column align-items-start justify-content-center">
+        {children}
+      </CardBody>
 
       <style jsx>{`
         .detail-box {

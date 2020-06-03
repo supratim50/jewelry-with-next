@@ -10,7 +10,8 @@ import {
   FiUser,
   FiBox,
   FiInfo,
-  FiPhone,
+  FiShoppingCart,
+  FiAtSign,
 } from "react-icons/fi";
 
 const NavBar = () => {
@@ -70,7 +71,13 @@ const NavBar = () => {
               </i>
             </div>
             {/* <!-- Catagories icons --> */}
-
+            <Link href="#">
+              <a href="#" className="text-decoration-none d-none d-md-block">
+                <i className="nav-icon ml-md-5 text-dark paragraph-text-lg">
+                  <FiGrid />
+                </i>
+              </a>
+            </Link>
             {/* profile */}
             <Link href="/profile">
               <a href="#" className="text-decoration-none d-none d-md-block">
@@ -80,9 +87,13 @@ const NavBar = () => {
               </a>
             </Link>
             {/* <!-- cart icon --> */}
-            <a href="#" className="text-decoration-none">
-              <i className="nav-icon flaticon-organization ml-md-5 text-primary paragraph-text-lg"></i>
-            </a>
+            <Link href="#">
+              <a className="text-decoration-none">
+                <i className="nav-icon ml-md-5 text-primary paragraph-text-lg">
+                  <FiShoppingCart />
+                </i>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -142,7 +153,7 @@ const NavBar = () => {
           {/* contact us */}
           <div className="py-3 d-flex justify-content-start align-items-center">
             <i className="nav-icon text-dark paragraph-text-lg mr-3">
-              <FiPhone />
+              <FiAtSign />
             </i>
             <p className="text-dark paragraph-text-lg mb-0">Contact Us</p>
           </div>
