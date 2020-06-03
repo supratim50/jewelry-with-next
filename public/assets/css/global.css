@@ -1,0 +1,139 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+body {
+  background-color: #fcfcfc;
+}
+
+.mt-medium {
+  margin-top: 5rem !important;
+}
+
+.bg-primary-light {
+  background-color: rgba(238, 45, 79, 0.03) !important;
+  color: #373737;
+}
+
+.bg-background {
+  background-color: #fcfcfc !important;
+}
+
+.bg-secondary {
+  background-color: #fff !important;
+  color: #ee2d4f !important;
+}
+
+.bg-secondary:hover {
+  background-color: #fff !important;
+  color: #ee2d4f !important;
+}
+
+.bg-light-grey {
+  background-color: #f5f5f5 !important;
+  color: #373737 !important;
+}
+
+.bg-light-grey-2 {
+  background-color: #fafafa !important;
+  color: #373737 !important;
+}
+
+.big-heading {
+  font-size: 34px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .big-heading {
+    font-size: 28px !important;
+  }
+}
+
+.heading {
+  font-weight: bold !important;
+  color: #373737;
+}
+
+.heading-primary {
+  font-size: 22px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .heading-primary {
+    font-size: 20px !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .heading-primary {
+    font-size: 18px !important;
+  }
+}
+
+.heading-primary-lg {
+  font-size: 25px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .heading-primary-lg {
+    font-size: 23px !important;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .heading-primary-lg {
+    font-size: 19px !important;
+  }
+}
+
+.paragraph-text {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .paragraph-text {
+    font-size: 12px !important;
+  }
+}
+
+.paragraph-text-lg {
+  font-size: 17px;
+}
+
+@media screen and (max-width: 767px) {
+  .paragraph-text-lg {
+    font-size: 14px !important;
+  }
+}
+
+.text-primary {
+  color: #ee2d4f !important;
+}
+
+.text-secondary {
+  color: #fff !important;
+}
+
+a.text-secondary:hover {
+  color: #fff !important;
+}
+
+.text-dark {
+  color: #373737 !important;
+}
+
+.text-green {
+  color: #2aa952 !important;
+}
+
+.text-dark-grey {
+  color: #939393;
+}
+.hover-text-primary:hover {
+  color: #ee2d4f !important;
+}
