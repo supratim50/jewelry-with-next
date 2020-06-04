@@ -6,6 +6,8 @@
 import App from "next/app";
 import Head from "next/head";
 import DefaultLayout from "../components/layouts/defaultLayout";
+// swiper js css
+import "swiper/css/swiper.css";
 
 class MyApp extends App {
   render() {
@@ -30,8 +32,6 @@ class MyApp extends App {
           ></link>
           {/* custom css */}
           <link rel="stylesheet" href="/assets/css/global.css" />
-          {/* <!-- ========== swiper =========== --> */}
-          <link rel="stylesheet" href="/assets/css/swiper.css" />
           {/* js */}
           <script src="/assets/js/swiper.js"></script>
           <script src="/assets/js/swiper-custom.js"></script>

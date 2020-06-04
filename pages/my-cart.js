@@ -2,6 +2,7 @@ import Heading from "../components/heading/heading";
 import ButtonPrimary from "../components/buttons/primaryButton";
 import CardBody from "../components/cards/cardBody";
 import CardFour from "../components/cards/CardFour";
+import Link from "next/link";
 
 const MyCart = () => {
   return (
@@ -14,12 +15,16 @@ const MyCart = () => {
                 title="My Cart"
                 classList="heading-primary-lg text-capitalize"
               />
-              <ButtonPrimary
-                btnSize="btn-big btn-big-md"
-                classList="paragraph-text-lg"
-              >
-                Check Out
-              </ButtonPrimary>
+              <Link href="/checkout-page">
+                <a>
+                  <ButtonPrimary
+                    btnSize="btn-big btn-big-md"
+                    classList="paragraph-text-lg"
+                  >
+                    Check Out
+                  </ButtonPrimary>
+                </a>
+              </Link>
             </div>
 
             {/* <!-- price --> */}

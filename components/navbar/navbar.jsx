@@ -87,7 +87,7 @@ const NavBar = () => {
               </a>
             </Link>
             {/* <!-- cart icon --> */}
-            <Link href="#">
+            <Link href="/my-cart">
               <a className="text-decoration-none">
                 <i className="nav-icon ml-md-5 text-primary paragraph-text-lg">
                   <FiShoppingCart />
@@ -118,26 +118,36 @@ const NavBar = () => {
             <p className="text-muted paragraph-text-lg mb-1">
               matildabrown@mail.com
             </p>
-            <a className="text-decoration-none text-primary paragraph-text-lg mb-0">
-              View Profile
-            </a>
+            <Link href="/profile">
+              <a className="text-decoration-none text-primary paragraph-text-lg mb-0">
+                View Profile
+              </a>
+            </Link>
           </div>
         </div>
         <div className="py-2">
           {/* catagories */}
-          <div className="py-3 d-flex justify-content-start align-items-center">
-            <i className="nav-icon text-dark paragraph-text-lg mr-3">
-              <FiGrid />
-            </i>
-            <p className="text-dark paragraph-text-lg mb-0">Catagories</p>
-          </div>
+          <Link href="/my-order">
+            <a className="text-decoration-none">
+              <div className="py-3 d-flex justify-content-start align-items-center">
+                <i className="nav-icon text-dark paragraph-text-lg mr-3">
+                  <FiGrid />
+                </i>
+                <p className="text-dark paragraph-text-lg mb-0">Catagories</p>
+              </div>
+            </a>
+          </Link>
           {/* my order */}
-          <div className="py-3 d-flex justify-content-start align-items-center">
-            <i className="nav-icon text-dark paragraph-text-lg mr-3">
-              <FiBox />
-            </i>
-            <p className="text-dark paragraph-text-lg mb-0">My Order</p>
-          </div>
+          <Link href="/my-order">
+            <a className="text-decoration-none">
+              <div className="py-3 d-flex justify-content-start align-items-center">
+                <i className="nav-icon text-dark paragraph-text-lg mr-3">
+                  <FiBox />
+                </i>
+                <p className="text-dark paragraph-text-lg mb-0">My Order</p>
+              </div>
+            </a>
+          </Link>
           <hr />
           {/* about us */}
           <Link href="/about-us">
@@ -151,12 +161,16 @@ const NavBar = () => {
             </a>
           </Link>
           {/* contact us */}
-          <div className="py-3 d-flex justify-content-start align-items-center">
-            <i className="nav-icon text-dark paragraph-text-lg mr-3">
-              <FiAtSign />
-            </i>
-            <p className="text-dark paragraph-text-lg mb-0">Contact Us</p>
-          </div>
+          <Link href="#">
+            <a className="text-decoration-none">
+              <div className="py-3 d-flex justify-content-start align-items-center">
+                <i className="nav-icon text-dark paragraph-text-lg mr-3">
+                  <FiAtSign />
+                </i>
+                <p className="text-dark paragraph-text-lg mb-0">Contact Us</p>
+              </div>
+            </a>
+          </Link>
         </div>
       </div>
       {/* <!-- ===== Sidebar component end ====== --> */}

@@ -63,6 +63,7 @@ const ProductContainer = ({ title, activeTitle, content }) => {
           {products.map((product) => (
             <div className="col-md-3 col-6 p-2 p-md-3" key={product.id}>
               <CardThree
+                link="/product-page"
                 catagories={product.catagories}
                 title={product.title}
                 price={product.price}

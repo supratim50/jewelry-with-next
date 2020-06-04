@@ -1,6 +1,7 @@
 /////////////////////////import React from 'react'
 import NavBar from "../navbar/navbar";
 import Footer from "../footer/footer";
+
 const DefaultLayout = ({ children }) => {
   return (
     <>

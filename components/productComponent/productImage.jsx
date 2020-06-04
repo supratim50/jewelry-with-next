@@ -1,30 +1,57 @@
+import Swiper from "react-id-swiper";
+
 const ProductImage = () => {
+  const imgArr = [
+    {
+      id: 1,
+      imageUrl: "/imgs/product.png",
+    },
+    {
+      id: 2,
+      imageUrl: "/imgs/product.png",
+    },
+    {
+      id: 3,
+      imageUrl: "/imgs/product.png",
+    },
+    {
+      id: 4,
+      imageUrl: "/imgs/product.png",
+    },
+  ];
+
+  // swiper params
+  const params = {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+  };
+
   return (
     <>
-      <div className="product-image-box w-100 py-3">
+      <div className="product-image-box w-100 pt-0 pt-md-3 pb-3">
         <div className="swiper-container">
           <div className="swiper-wrapper">
-            {/* <!-- slide 1 --> */}
-            <div className="swiper-slide">
-              <img
-                src="./imgs/product.png"
-                alt="Product Image"
-                className="product-image w-100"
-              />
-            </div>
-            {/* <!-- slide 2 --> */}
-            <div className="swiper-slide">
-              <img
-                src="./imgs/product.png"
-                alt="Product Image"
-                className="product-image w-100"
-              />
-            </div>
+            <Swiper {...params} activeDotColor="#ee2d4f">
+              {/* <!-- slide 1 --> */}
+              {imgArr.map(({ imageUrl, id }) => (
+                <div className="swiper-slide" key={id}>
+                  <img
+                    src={imageUrl}
+                    alt="Product Image"
+                    className="product-image w-100"
+                  />
+                </div>
+              ))}
+            </Swiper>
           </div>
           {/* <!-- Add Pagination --> */}
-          <div className="swiper-pagination"></div>
+          {/* <div className="swiper-pagination"></div> */}
         </div>
-        <style jsx>{`
+        {/* <style jsx>{`
           .swiper-container {
             width: 100%;
             height: 100%;
@@ -33,7 +60,6 @@ const ProductImage = () => {
             text-align: center;
             font-size: 18px;
 
-            /* Center slide text vertically */
             display: -webkit-box;
             display: -ms-flexbox;
             display: -webkit-flex;
@@ -49,49 +75,12 @@ const ProductImage = () => {
           }
 
           .swiper-pagination-bullet-active {
-            background-color: $color-primary !important;
+            background-color: #ee2d4f !important;
           }
-
-          .swiper-pagination {
-            bottom: 0% !important;
-          }
-        `}</style>
+        `}</style> */}
       </div>
     </>
   );
 };
 
-// For version <=2.3.2
-// import { Swiper, Navigation, Pagination } from 'swiper/dist/js/swiper.esm';
-// For version >=2.4.0
-// import { Swiper, Navigation, Pagination } from 'swiper/js/swiper.esm';
-// import ReactIdSwiperCustom from 'react-id-swiper/lib/ReactIdSwiper.custom';
-
-// const ProductImage = () => {
-//   const params = {
-//     // Provide Swiper class as props
-//     Swiper,
-//     // Add modules you need
-//     modules: [Navigation, Pagination],
-//     pagination: {
-//       el: '.swiper-pagination',
-//       type: 'bullets',
-//       clickable: true
-//     },
-//     navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev'
-//     },
-//     spaceBetween: 30
-//   }
-//   return(
-//     <ReactIdSwiperCustom {...params}>
-//       <div>Slide 1</div>
-//       <div>Slide 2</div>
-//       <div>Slide 3</div>
-//       <div>Slide 4</div>
-//       <div>Slide 5</div>
-//     </ReactIdSwiperCustom>
-//   )
-// }
 export default ProductImage;

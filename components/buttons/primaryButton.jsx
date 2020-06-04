@@ -1,14 +1,13 @@
 const PrimaryButton = ({ children, btnSize, classList }) => {
   return (
     <>
-      <a
-        href="#"
+      <div
         className={`btn btn-primary ${btnSize && btnSize} ${
           classList && classList
         }`}
       >
         {children}
-      </a>
+      </div>
       <style jsx>
         {`
           .btn {

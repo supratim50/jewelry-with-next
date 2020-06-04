@@ -37,6 +37,11 @@ const SideImagesContainer = () => {
           max-height: 400px;
           overflow-y: scroll;
         }
+        @media screen and (max-width: 1024px) {
+          .side-image {
+            max-height: 350px;
+          }
+        }
 
         .side-image-box {
           max-width: 110px;

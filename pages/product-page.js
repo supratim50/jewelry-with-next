@@ -29,9 +29,9 @@ const ProductPage = () => {
               </div>
             </div>
             {/* <!-- product-details --> */}
-            <div className="col-12 col-md-6 px-md-4 px-2">
+            <div className="col-12 col-md-6 px-md-4 px-3">
               {/* <!--================= details ===================--> */}
-              <div className="details py-3  d-flex flex-md-column justify-content-between self-sligns-center">
+              <div className="details py-3 d-flex flex-md-column justify-content-between self-sligns-center">
                 <div>
                   <h1 className="heading heading-primary-lg font-weight-bold mb-1 text-truncate">
                     Gold Crown
@@ -58,7 +58,7 @@ const ProductPage = () => {
               {/* <!--==================== Color end =====================-->
   
               <!--==================== Button  =====================--> */}
-              <div className="text-center text-md-left">
+              <div className="text-center text-md-left mt-5">
                 <ButtonPrimary btnSize="btn-big">Add To Cart</ButtonPrimary>
               </div>
               {/* <!--==================== Button end =====================--> */}
@@ -75,7 +75,7 @@ const ProductPage = () => {
 
           @media screen and (max-width: 767px) {
             #product-show {
-              margin-top: 20px;
+              margin-top: 0px;
             }
           }
           .price {

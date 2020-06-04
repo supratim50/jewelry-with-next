@@ -2,25 +2,88 @@ import ButtonRoud from "../buttons/roundButton";
 import { FiFeather } from "react-icons/fi";
 
 const ColorPalat = () => {
+  const colors = [
+    {
+      key: 1,
+      color: "red",
+    },
+    {
+      key: 2,
+      color: "blue",
+    },
+    {
+      key: 3,
+      color: "yellow",
+    },
+    {
+      key: 4,
+      color: "pink",
+    },
+    {
+      key: 5,
+      color: "grey",
+    },
+  ];
+
   return (
     <div className="color-palat p-2 my-3 shadow-sm d-inline-block">
-      <div className="color-btn rounded-circle text-dark no-shadow bg-light-grey d-inline-block p-2 border text-center mr-2 mr-md-3">
+      <div className="color-btn rounded-circle text-dark no-shadow bg-light-grey d-inline-block p-2 border text-center">
         <FiFeather />
       </div>
 
       <div className="d-inline-block">
-        <div className=" color-btn rounded-circle no-shadow bg-light-grey d-inline-block p-2 border text-center mr-2 mr-md-3 border">
-          j
-        </div>
+        {colors.map(({ id, color }) => (
+          <div
+            key={id}
+            className="color-btn p-1 rounded-circle d-inline-block border text-center ml-2 ml-md-3 border"
+          >
+            <div
+              className={`color rounded-circle p-1 d-inline-block border text-center border ${color}`}
+            >
+              <span className="invisible">j</span>
+            </div>
+          </div>
+        ))}
       </div>
+
       <style jsx>{`
         .color-palat {
           border-radius: 35px !important;
-          min-width: 100px;
+           {
+            /* min-width: 100px; */
+          }
         }
         .color-btn {
-          min-width: 40px;
-          min-height: 40px;
+          min-width: 43px !important;
+          min-height: 40px !important;
+        }
+
+        .color {
+          width: 100%;
+          height: 100%;
+        }
+
+         {
+          /* colors */
+        }
+        .red {
+          background-color: #ff4242 !important;
+        }
+
+        .blue {
+          background-color: #2377f4 !important;
+        }
+
+        .yellow {
+          background-color: #f4ba23 !important;
+        }
+
+        .pink {
+          background-color: #f42387 !important;
+        }
+
+        .grey {
+          background-color: #d8d8d8 !important;
         }
       `}</style>
     </div>

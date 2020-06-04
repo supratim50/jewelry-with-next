@@ -114,6 +114,9 @@ body {
 .text-primary {
   color: #ee2d4f !important;
 }
+a.text-primary:hover {
+  color: #ee2d4f !important;
+}
 
 .text-secondary {
   color: #fff !important;
