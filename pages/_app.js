@@ -32,9 +32,6 @@ class MyApp extends App {
           ></link>
           {/* custom css */}
           <link rel="stylesheet" href="/assets/css/global.css" />
-          {/* js */}
-          <script src="/assets/js/swiper.js"></script>
-          <script src="/assets/js/swiper-custom.js"></script>
         </Head>
         {/* <SnackbarProvider> */}
         <Layout>

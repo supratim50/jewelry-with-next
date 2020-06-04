@@ -5,6 +5,30 @@ import CardFour from "../components/cards/CardFour";
 import Link from "next/link";
 
 const MyCart = () => {
+  const productArr = [
+    {
+      id: 1,
+      imageUrl: "/imgs/cardImg-2.jpg",
+      title: "Metal Rhodium Bracelet",
+      quantity: 2,
+      price: 11.23,
+    },
+    {
+      id: 2,
+      imageUrl: "/imgs/cardImg-2.jpg",
+      title: "Metal Rhodium Bracelet",
+      quantity: 3,
+      price: 11.23,
+    },
+    {
+      id: 3,
+      imageUrl: "/imgs/cardImg-2.jpg",
+      title: "Metal Rhodium Bracelet",
+      quantity: 4,
+      price: 11.23,
+    },
+  ];
+
   return (
     <>
       <section id="my-cart">
@@ -39,10 +63,18 @@ const MyCart = () => {
             {/* <!-- price end --> */}
 
             <div className="cart-item-box mx-auto mt-5 pt-4">
-              <CardBody>
-                <CardFour />
-                <CardFour />
-                <CardFour />
+              <CardBody bgSmHidden>
+                {/* products */}
+                {productArr.map((product) => (
+                  <div className="pb-4" key={product.id}>
+                    <CardFour
+                      title={product.title}
+                      imageUrl={product.imageUrl}
+                      quantity={product.quantity}
+                      price={product.price}
+                    />
+                  </div>
+                ))}
               </CardBody>
             </div>
           </div>

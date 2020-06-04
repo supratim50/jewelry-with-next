@@ -1,8 +1,9 @@
 import { FiPlus, FiMinus } from "react-icons/fi";
 import { useState } from "react";
 
-const Quantity = () => {
-  const [quantity, setQuantity] = useState(0);
+const Quantity = ({ quantityNum }) => {
+  const quantityNumber = quantityNum ? quantityNum : 0;
+  const [quantity, setQuantity] = useState(quantityNumber);
 
   const addQuantity = () => setQuantity(quantity + 1);
 

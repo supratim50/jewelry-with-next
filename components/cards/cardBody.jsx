@@ -1,9 +1,9 @@
-const CardBody = ({ children, classList }) => {
+const CardBody = ({ children, classList, bgSmHidden }) => {
   return (
     <div
-      className={`detail-box p-3 px-3 mt-2 mt-md-4 w-100 bg-secondary rounded-lg shadow-sm ${
-        classList && classList
-      }`}
+      className={`detail-box py-3 px-0 px-md-3 mt-2 mt-md-4 w-100 bg-secondary rounded-lg shadow-sm ${
+        classList ? classList : ""
+      } ${bgSmHidden ? "bg-hidden" : ""}`}
     >
       {children}
       <style jsx>{`
@@ -12,9 +12,16 @@ const CardBody = ({ children, classList }) => {
           min-height: 137px !important;
         }
 
+        @media screen and (max-width: 576px) {
+          .bg-hidden {
+            background-color: #fcfcfc !important;
+          }
+        }
+
         @media screen and (max-width: 575px) {
           .detail-box {
             min-height: 130px !important;
+            box-shadow: none !important;
           }
         }
       `}</style>

@@ -3,31 +3,30 @@ import Quantity from "../productComponent/quantity";
 import RoundButton from "../buttons/roundButton";
 import { FiTrash2 } from "react-icons/fi";
 
-const CardFour = () => {
+import PropType from "prop-types";
+
+const CardFour = ({ title, imageUrl, price, quantity }) => {
   return (
     <div className="d-flex justify-content-start align-items-center p-1 p-md-3">
       <div className="img-box overflow-hidden">
-        <img
-          src="/imgs/cardImg-2.jpg"
-          alt="Product Image"
-          className="w-100 image"
-        />
+        <img src={imageUrl} alt="Product Image" className="w-100 image" />
       </div>
 
-      <div className="details-box ml-3 ml-md-4 d-flex flex-column justify-content-start align-items-start">
+      <div className="details-box ml-3 ml-md-4 d-flex flex-fill flex-column justify-content-start align-items-start">
         <Heading
-          title="Metal Rhodium Bracelet"
-          classList="paragraph-text-lg mb-3"
+          title={title}
+          classList="paragraph-text-lg mb-3 text-truncate"
         />
-        <Quantity />
-        <h2 className="heading heading-primary text-primary font-weight-bold mt-auto mb-0">
-          $&nbsp;11.22
-        </h2>
+        <Quantity quantityNum={quantity} />
+        <div className="d-flex justify-content-between align-items-center mt-auto w-100">
+          <h2 className="heading flex-fill heading-primary text-primary font-weight-bold mb-0">
+            $&nbsp;{price}
+          </h2>
+          <RoundButton classList="text-muted heading-primary">
+            <FiTrash2 />
+          </RoundButton>
+        </div>
       </div>
-
-      <RoundButton classList="mt-auto ml-auto text-muted heading-primary">
-        <FiTrash2 />
-      </RoundButton>
 
       <style jsx>{`
         .img-box {
@@ -44,9 +43,26 @@ const CardFour = () => {
         .details-box {
           height: 195px !important;
         }
+        @media screen and (max-width: 576px) {
+          .img-box {
+            max-width: 117px !important;
+            height: 146px !important;
+          }
+        }
+        @media screen and (max-width: 576px) {
+          .details-box {
+            height: 146px !important;
+          }
+        }
       `}</style>
     </div>
   );
 };
 
+CardFour.propTypes = {
+  imageUrl: PropType.string.isRequired,
+  title: PropType.string.isRequired,
+  price: PropType.number.isRequired,
+  quantity: PropType.number.isRequired,
+};
 export default CardFour;

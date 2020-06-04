@@ -1,7 +1,6 @@
 const RoundButton = ({ children, classList }) => {
   return (
-    <a
-      href="#"
+    <div
       className={`btn-round shadow-sm d-flex justify-content-center align-items-center text-decoration-none ${
         classList ? classList : ""
       }`}
@@ -20,6 +19,7 @@ const RoundButton = ({ children, classList }) => {
           width: 50px;
           height: 50px;
           border-radius: 50%;
+          background-color: #fff;
         }
 
         .no-shadow {
@@ -32,7 +32,7 @@ const RoundButton = ({ children, classList }) => {
           }
         }
       `}</style>
-    </a>
+    </div>
   );
 };
 
