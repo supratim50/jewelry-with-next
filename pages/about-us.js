@@ -9,7 +9,7 @@ const AboutUs = () => {
       <div className="about-top-img"></div>
 
       {/* <!-- about box --> */}
-      <div className="about-box container shadow-sm p-2 p-md-4 pb-5 bg-secondary mb-5">
+      <div className="about-box container p-2 p-md-4 pb-5 bg-secondary mb-5">
         <div className="about-img-box w-100 mb-4 mb-md-5 overflow-hidden">
           <img
             src="/imgs/about.png"
@@ -429,6 +429,7 @@ const AboutUs = () => {
         #about-us .about-box {
           margin-top: -250px;
           border-radius: 10px;
+          box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.05);
         }
 
         @media screen and (max-width: 767px) {
