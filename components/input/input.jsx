@@ -1,19 +1,41 @@
-const Input = ({ type, id, placeholder, error }) => {
+const Input = ({ type, id, placeholder, error, textArea, classList }) => {
   return (
     <div className="form-label-group shadow-sm">
-      <input
-        type={type}
-        id={id}
-        className={`form-control shadow-none border-0 h-auto shadow-sm ${
-          error ? "error" : ""
-        }`}
-        placeholder={placeholder}
-        required
-        autoFocus
-      />
-      <label className="input-label" htmlFor={id}>
-        {placeholder}
-      </label>
+      {textArea ? (
+        // text area
+        <>
+          <textarea
+            type={type}
+            id={id}
+            className={`form-control shadow-none border-0 h-auto shadow-sm ${
+              error ? "error" : ""
+            } ${classList ? classList : ""}`}
+            placeholder={placeholder}
+            required
+            autoFocus
+          ></textarea>
+          <label className="input-label" htmlFor={id}>
+            {placeholder}
+          </label>
+        </>
+      ) : (
+        // input
+        <>
+          <input
+            type={type}
+            id={id}
+            className={`form-control shadow-none border-0 h-auto shadow-sm ${
+              error ? "error" : ""
+            } ${classList ? classList : ""}`}
+            placeholder={placeholder}
+            required
+            autoFocus
+          />
+          <label className="input-label" htmlFor={id}>
+            {placeholder}
+          </label>
+        </>
+      )}
 
       <style jsx>
         {`

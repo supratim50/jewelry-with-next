@@ -1,4 +1,7 @@
 import Heading from "../components/heading/heading";
+import ContactList from "../components/contact/contact-list";
+import Input from "../components/input/input";
+import PrimaryButton from "../components/buttons/primaryButton";
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -17,8 +20,8 @@ const ContactPage = () => {
           </p>
         </div>
 
-        <div className="row border">
-          <div className="col-12 col-md-6 p-2 p-md-3 border d-flex justify-content-center align-items-center">
+        <div className="row mt-5 p-2 pt-5 w-100 mx-0">
+          <div className="col-12 col-md-6 p-2 p-md-3 d-flex justify-content-center align-items-center">
             <div className="contact-img-box">
               <img
                 src="/imgs/contact-us.svg"
@@ -27,16 +30,55 @@ const ContactPage = () => {
               />
             </div>
           </div>
-          <div className="col-12 col-md-6 p-2 p-md-3 border">
-            <div className="d-flex justify-content-start align-items-center">
-              <p className="heading big-headung">
-                <FaPhoneAlt />
-              </p>
-              <p className="paragraph-text-lg text-dark ml-3 mb-0">
-                (205) 555-0100
-              </p>
+          {/* contact list */}
+          <div className="col-12 col-md-6 p-2 p-md-3 d-flex justify-content-center align-items-center">
+            <div className="contact-list mt-5 pt-4 mt-md-0 pt-md-0">
+              <ContactList icon={<FaPhoneAlt />} text="(205) 555-0100" />
+              <ContactList
+                icon={<FaEnvelope />}
+                text="tiffany.dean@example.com"
+              />
+              <ContactList icon={<FaWhatsapp />} text="(205) 555-0100" />
+              <ContactList
+                icon={<FaLocationArrow />}
+                text="Vermont 7183 Ash Dr undefined, Anaheim 25138"
+              />
             </div>
           </div>
+        </div>
+
+        {/* contat form */}
+        <div className="d-flex justify-content-center mt-5">
+          <div className="input-main-box rounded-lg p-2 p-md-4 pt-5">
+            <div className="input-box pt-4 mt-4">
+              <form className="form-signin">
+                <Input
+                  type="text"
+                  id="inputEmail"
+                  placeholder="Email"
+                  classList="mt-4"
+                />
+                <Input
+                  type="password"
+                  id="inputPassword"
+                  placeholder="Password"
+                  classList="mt-4"
+                />
+                <Input
+                  type="Message"
+                  id="message"
+                  placeholder="Message"
+                  classList="mt-4"
+                  textArea
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div className="text-center mt-3 mb-5 pb-5">
+          <PrimaryButton btnSize="btn-big" classList="btn-radius">
+            Submit
+          </PrimaryButton>
         </div>
       </div>
       <style jsx>{`
@@ -50,15 +92,29 @@ const ContactPage = () => {
         }
 
         .contact-box {
-          border-radius: 10px;
+          -radius: 10px;
           box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.05);
         }
 
+        @media screen and (max-width: 575px) {
+          .contact-box {
+            width: 95% !important;
+          }
+        }
+
         .contact-img-box {
-          max-width: 368px;
+          max-width: 390px;
         }
         .contact-img {
-          width: 100% !important;
+          max-width: 100% !important;
+        }
+        .contact-list {
+          max-width: 390px;
+        }
+
+        .input-main-box {
+          width: 95% !important;
+          max-width: 470px;
         }
       `}</style>
     </section>
