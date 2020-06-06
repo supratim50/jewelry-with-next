@@ -6,7 +6,7 @@ const CardBodyTwo = ({ title, details, dark }) => {
       }`}
     >
       <p
-        className={`paragraph-text-lg font-weight-bold mb-3 ${
+        className={`paragraph-text-lg font-weight-bold mb-2 ${
           dark ? "text-secondary" : "text-dark"
         }`}
       >

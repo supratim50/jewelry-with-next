@@ -104,8 +104,8 @@ const NavBar = () => {
         id="side-nav"
         onClick={toggleSidenav}
       ></div>
-      <div className="side-drawer p-3 p-md-4">
-        <div className="py-3 mb-3 profile d-flex justify-content-between align-items-center">
+      <div className="side-drawer p-3 px-md-4 py-md-5">
+        <div className="py-2 mb-3 profile d-flex justify-content-between align-items-center">
           {/* <!-- profile image --> */}
           <div className="image-box border rounded-circle overflow-hidden">
             <img src="./imgs/face1.jpg" alt="Profile Image" className="w-100" />
@@ -161,7 +161,7 @@ const NavBar = () => {
             </a>
           </Link>
           {/* contact us */}
-          <Link href="#">
+          <Link href="contact-page">
             <a className="text-decoration-none">
               <div className="py-3 d-flex justify-content-start align-items-center">
                 <i className="nav-icon text-dark paragraph-text-lg mr-3">
@@ -182,11 +182,11 @@ const NavBar = () => {
       >
         <div className="search-component-box px-3 px-md-4 py-4 py-md-5">
           {/* <!--===== search box ======--> */}
-          <div className="search-box p-1 px-2 rounded-lg px-md-4 mb-4 d-flex justify-content-center align-items-center shadow-sm">
+          <div className="search-box p-1 px-3 rounded-lg px-md-4 mb-4 d-flex justify-content-center align-items-center shadow-sm">
             {/* back icon box */}
-            <div className="back-btn-box px-2 px-md-3" id="back-btn">
+            <div className="back-btn-box" id="back-btn">
               <i
-                className="text-dark btn p-0 paragraph-text-lg"
+                className="text-dark btn p-0 nav-icon"
                 onClick={toggleSearchBox}
               >
                 <FiArrowLeft />
@@ -198,19 +198,15 @@ const NavBar = () => {
                 <input
                   type="text"
                   placeholder="Search Items"
-                  className="search-bar w-100 py-2 px-2 py-md-3 paragraph-text-lg border-0"
+                  className="search-bar w-100 py-2 px-2 px-md-4 py-md-3 paragraph-text-lg border-0"
                   value={searchVal}
                   onChange={changeHandler}
                 />
               </form>
             </div>
             {/* reset form box  */}
-            <div
-              className="back-btn-box px-2 px-md-3 mr-2 mr-md-3"
-              id="back-btn"
-              onClick={resetInput}
-            >
-              <i className="text-dark btn p-0 paragraph-text-lg">
+            <div className="back-btn-box" id="back-btn" onClick={resetInput}>
+              <i className="text-dark btn p-0 nav-icon">
                 <FiX />
               </i>
             </div>
@@ -218,22 +214,12 @@ const NavBar = () => {
 
           {/* <!--==== search history ====--> */}
           <div className="py-2 px-md-4 px-2 d-flex justify-content-start align-items-center">
-            <div className="px-2 px-md-3">
-              <i className="text-dark paragraph-text-lg ">
+            <div>
+              <i className="text-dark nav-icon">
                 <FiClock />
               </i>
             </div>
-            <div className="py-2 px-2 flex-fill">
-              <p className="paragraph-text-lg text-dark mb-0">Hello</p>
-            </div>
-          </div>
-          <div className="py-2 px-md-4 px-2 d-flex justify-content-start align-items-center">
-            <div className="px-2 px-md-3">
-              <i className="text-dark paragraph-text-lg ">
-                <FiClock />
-              </i>
-            </div>
-            <div className="py-2 px-2 flex-fill">
+            <div className="py-2 px-2 px-md-4 py-md-3 flex-fill">
               <p className="paragraph-text-lg text-dark mb-0">Hello</p>
             </div>
           </div>

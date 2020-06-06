@@ -1,4 +1,6 @@
-export default function CardOne({ imageName, heading, subHeading }) {
+import PropTypes from "prop-types";
+
+const CardOne = ({ imageName, heading, subHeading }) => {
   return (
     <>
       <a href="#" className="text-decoration-none">
@@ -62,4 +64,6 @@ export default function CardOne({ imageName, heading, subHeading }) {
       </a>
     </>
   );
-}
+};
+
+export default CardOne;

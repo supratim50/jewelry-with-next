@@ -1,13 +1,13 @@
 // import Head from "next/head";
 
-import TopContainer from "../components/cotainers/topOffersContainer";
+import TopOfferContainer from "../components/cotainers/topOffersContainer";
 import ProductContainer from "../components/cotainers/productLishContainer";
 
 const IndexPage = () => {
   return (
     <>
       {/* <!--  top offers --> */}
-      <TopContainer />
+      <TopOfferContainer />
       {/* <!--  Product Container --> */}
       <ProductContainer
         key="1"

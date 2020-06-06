@@ -41,14 +41,14 @@ const CheckoutPage = () => {
                 <div className="col-12 col-md-5 offset-md-2 mt-4 mt-md-0 px-0">
                   <UserDetails catagory="Payment">
                     <div className="d-flex align-items-center">
-                      <p className="mb-0 mr-3 payment-icon">
-                        <i>
-                          <FiEdit />
-                        </i>
-                      </p>
+                      {/* <p className="mb-0 mr-3 payment-icon"> */}
+                      <i className="heading big-heading mr-3">
+                        <FiEdit />
+                      </i>
+                      {/* </p> */}
                       <div className="p-1">
                         <p className="paragraph-text-lg text-dark font-weight-bold mb-0">
-                          Jane Doe
+                          Jane Doe 
                         </p>
                         <p className="paragraph-text-lg text-dark font-weight-bold mb-0">
                           ****&nbsp;****&nbsp;****&nbsp;1234

@@ -12,13 +12,13 @@ const CardFour = ({ title, imageUrl, price, quantity }) => {
         <img src={imageUrl} alt="Product Image" className="w-100 image" />
       </div>
 
-      <div className="details-box ml-3 ml-md-4 d-flex flex-fill flex-column justify-content-start align-items-start">
+      <div className="details-box py-2 ml-3 ml-md-4 d-flex flex-fill flex-column align-self-stretch">
         <Heading
           title={title}
           classList="paragraph-text-lg mb-3 text-truncate"
         />
         <Quantity quantityNum={quantity} />
-        <div className="d-flex justify-content-between align-items-center mt-auto w-100">
+        <div className="d-flex justify-content-between align-items-end mt-auto w-100">
           <h2 className="heading flex-fill heading-primary text-primary font-weight-bold mb-0">
             $&nbsp;{price}
           </h2>
@@ -39,18 +39,9 @@ const CardFour = ({ title, imageUrl, price, quantity }) => {
           height: 100%;
           object-fit: cover;
         }
-
-        .details-box {
-          height: 195px !important;
-        }
         @media screen and (max-width: 576px) {
           .img-box {
             max-width: 117px !important;
-            height: 146px !important;
-          }
-        }
-        @media screen and (max-width: 576px) {
-          .details-box {
             height: 146px !important;
           }
         }

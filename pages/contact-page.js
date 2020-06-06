@@ -2,6 +2,7 @@ import Heading from "../components/heading/heading";
 import ContactList from "../components/contact/contact-list";
 import Input from "../components/input/input";
 import PrimaryButton from "../components/buttons/primaryButton";
+import Textarea from "../components/input/textarea";
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -12,10 +13,10 @@ import {
 const ContactPage = () => {
   return (
     <section className="contact-us">
-      <div className="contact-box container p-2 p-md-4 pb-5 bg-secondary mb-5">
+      <div className="contact-box container p-2 p-md-4 pb-5 bg-secondary mb-5 rounded-lg">
         <div className="heading-box text-center mt-5">
           <Heading title="Contact Us" classList="big-heading" />
-          <p className="paragraph-text-lg text-muted mt-4">
+          <p className="paragraph-text-lg text-muted mt-3">
             We would love to hear from you!
           </p>
         </div>
@@ -33,12 +34,21 @@ const ContactPage = () => {
           {/* contact list */}
           <div className="col-12 col-md-6 p-2 p-md-3 d-flex justify-content-center align-items-center">
             <div className="contact-list mt-5 pt-4 mt-md-0 pt-md-0">
-              <ContactList icon={<FaPhoneAlt />} text="(205) 555-0100" />
+              <ContactList
+                icon={<FaPhoneAlt />}
+                text="(205) 555-0100"
+                classList="mb-4"
+              />
               <ContactList
                 icon={<FaEnvelope />}
                 text="tiffany.dean@example.com"
+                classList="mb-4"
               />
-              <ContactList icon={<FaWhatsapp />} text="(205) 555-0100" />
+              <ContactList
+                icon={<FaWhatsapp />}
+                text="(205) 555-0100"
+                classList="mb-4"
+              />
               <ContactList
                 icon={<FaLocationArrow />}
                 text="Vermont 7183 Ash Dr undefined, Anaheim 25138"
@@ -64,13 +74,7 @@ const ContactPage = () => {
                   placeholder="Password"
                   classList="mt-4"
                 />
-                <Input
-                  type="Message"
-                  id="message"
-                  placeholder="Message"
-                  classList="mt-4"
-                  textArea
-                />
+                <Textarea id="message" placeholder="Message" classList="mt-4" />
               </form>
             </div>
           </div>
