@@ -26,7 +26,7 @@ const ColorPalat = () => {
   ];
 
   return (
-    <div className="color-palat p-2 my-3 shadow-sm d-inline-block">
+    <div className="color-palat p-2 my-3 shadow-sm d-inline-block bg-secondary">
       <div className="color-btn rounded-circle text-dark no-shadow bg-light-grey d-inline-block p-2 border text-center">
         <FiFeather />
       </div>
@@ -49,13 +49,25 @@ const ColorPalat = () => {
       <style jsx>{`
         .color-palat {
           border-radius: 35px !important;
-           {
-            /* min-width: 100px; */
+          z-index: 800;
+        }
+        @media screen and (max-width: 767px) {
+          .color-palat {
+            position: absolute;
+            top: -63%;
+            left: 15px;
           }
         }
         .color-btn {
-          min-width: 43px !important;
-          min-height: 40px !important;
+          width: 43px !important;
+          height: 43px !important;
+        }
+
+        @media screen and (max-width: 567px) {
+          .color-btn {
+            width: 33px !important;
+            height: 33px !important;
+          }
         }
 
         .color {

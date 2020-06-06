@@ -18,7 +18,11 @@ const ShippingDetails = () => {
           </p>
           <p className="paragraph-text text-muted mb-0">Expiry: 08/24</p>
           <div className="mt-auto">
-            <ButtonSecondary btnSize="btn-small" textSize="small-text">
+            <ButtonSecondary
+              classList="radius"
+              btnSize="btn-small"
+              textSize="small-text"
+            >
               Set as primary address
             </ButtonSecondary>
           </div>

@@ -4,7 +4,7 @@ const ProductImage = () => {
   const imgArr = [
     {
       id: 1,
-      imageUrl: "/imgs/product.png",
+      imageUrl: "/imgs/cardImg-1.jpeg",
     },
     {
       id: 2,
@@ -51,6 +51,23 @@ const ProductImage = () => {
           {/* <!-- Add Pagination --> */}
           {/* <div className="swiper-pagination"></div> */}
         </div>
+        <style jsx>{`
+          .swiper-wrapper {
+            border-radius: 20px;
+            overflow: hidden !important;
+          }
+
+          @media screen and (max-width: 767px) {
+            .swiper-wrapper {
+              border-radius: 0px;
+            }
+          }
+          .product-image {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover;
+          }
+        `}</style>
         {/* <style jsx>{`
           .swiper-container {
             width: 100%;

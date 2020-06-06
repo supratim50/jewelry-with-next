@@ -27,7 +27,7 @@ const ProductDeatilsCard = () => {
             </span>
           </p>
           <div className="mt-auto">
-            <SecondaryButton>Reorder</SecondaryButton>
+            <SecondaryButton classList="radius">Reorder</SecondaryButton>
           </div>
         </div>
         {/* <!-- order details end -->

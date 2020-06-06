@@ -1,19 +1,28 @@
-const SecondaryButton = ({ children, btnSize, textSize, active }) => {
+const SecondaryButton = ({
+  children,
+  btnSize,
+  textSize,
+  active,
+  classList,
+}) => {
   return (
-    <a
-      href="#"
+    <div
       className={`btn btn-secondary paragraph-text ${btnSize ? btnSize : ""} ${
         textSize ? textSize : ""
-      } ${active ? active : ""}`}
+      } ${active ? active : ""} ${classList ? classList : ""}`}
     >
       {children}
       <style jsx>{`
         .btn {
-          border-radius: 20px !important;
+          border-radius: 10px !important;
           border: 1px solid #ee2d4f !important;
           -webkit-transition: all 0.5s;
           transition: all 0.5s;
           padding: 8px 20px !important;
+        }
+
+        .radius {
+          border-radius: 20px !important;
         }
 
         .btn-big {
@@ -22,8 +31,12 @@ const SecondaryButton = ({ children, btnSize, textSize, active }) => {
 
         @media screen and (max-width: 567px) {
           .btn-big {
-            padding: 12px 65px !important;
+            padding: 12px 70px !important;
           }
+        }
+
+        .btn-medium {
+          padding: 14px 63px !important;
         }
 
         .btn-small {
@@ -55,7 +68,7 @@ const SecondaryButton = ({ children, btnSize, textSize, active }) => {
           background-color: #c92140 !important;
         }
       `}</style>
-    </a>
+    </div>
   );
 };
 

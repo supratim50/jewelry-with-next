@@ -4,6 +4,7 @@ import ProductImage from "../components/productComponent/productImage";
 import SideImagesContainer from "../components/productComponent/sideImagesContainer";
 import Quantity from "../components/productComponent/quantity";
 import ButtonPrimary from "../components/buttons/primaryButton";
+import ButtonSecondary from "../components/buttons/secondaryButton";
 import ProductList from "../components/cotainers/productLishContainer";
 import ColorPalat from "../components/productComponent/colorPalat";
 
@@ -31,7 +32,7 @@ const ProductPage = () => {
             {/* <!-- product-details --> */}
             <div className="col-12 col-md-6 px-md-4 px-3">
               {/* <!--================= details ===================--> */}
-              <div className="details py-3 d-flex flex-md-column justify-content-between self-sligns-center">
+              <div className="details py-2 py-md-3 d-flex flex-md-column justify-content-between self-sligns-center">
                 <div>
                   <h1 className="heading heading-primary-lg font-weight-bold mb-1 text-truncate">
                     Gold Crown
@@ -39,7 +40,7 @@ const ProductPage = () => {
                   <p className="paragraph-text text-muted mb-0">Gold Plated</p>
                 </div>
                 <div className="mt-md-3 d-flex flex-column flex-md-row justify-content-start align-items-center">
-                  <h1 className="offer-price heading heading-primary text-primary mb-0">
+                  <h1 className="offer-price heading heading-primary text-primary mb-1">
                     $&nbsp;11.12
                   </h1>
                   <p className="price ml-md-3 mb-0 paragraph-text text-muted">
@@ -58,8 +59,13 @@ const ProductPage = () => {
               {/* <!--==================== Color end =====================-->
   
               <!--==================== Button  =====================--> */}
-              <div className="text-center text-md-left mt-5">
-                <ButtonPrimary btnSize="btn-big">Add To Cart</ButtonPrimary>
+              <div className="d-flex justify-content-around justify-content-md-start text-center text-md-left mt-5">
+                <ButtonPrimary btnSize="btn-small" classList="paragraph-text">
+                  Add To Cart
+                </ButtonPrimary>
+                <ButtonSecondary btnSize="btn-small" classList="ml-md-3">
+                  Buy Now
+                </ButtonSecondary>
               </div>
               {/* <!--==================== Button end =====================--> */}
             </div>
