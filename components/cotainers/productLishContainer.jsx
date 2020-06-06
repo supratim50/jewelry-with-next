@@ -38,7 +38,7 @@ const ProductContainer = ({ title, activeTitle, content }) => {
   ];
 
   return (
-    <section className="mt-5" id="fav-deals-of-the-day">
+    <section className="mt-5 pt-5" id="fav-deals-of-the-day">
       <div className="container">
         {/* heading */}
         {/* <Heading /> */}
@@ -61,7 +61,10 @@ const ProductContainer = ({ title, activeTitle, content }) => {
         <div className="row mt-4">
           {/* product list */}
           {products.map((product) => (
-            <div className="col-md-3 col-6 p-2 p-md-3" key={product.id}>
+            <div
+              className="col-md-4 col-lg-3 col-6 p-2 p-md-3"
+              key={product.id}
+            >
               <CardThree
                 link="/product-page"
                 catagories={product.catagories}

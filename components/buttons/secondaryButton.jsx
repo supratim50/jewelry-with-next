@@ -13,6 +13,7 @@ const SecondaryButton = ({ children, btnSize, textSize, active }) => {
           border: 1px solid #ee2d4f !important;
           -webkit-transition: all 0.5s;
           transition: all 0.5s;
+          padding: 8px 20px !important;
         }
 
         .btn-big {

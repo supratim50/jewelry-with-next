@@ -22,7 +22,7 @@ const ContactPage = () => {
         </div>
 
         <div className="row mt-5 p-2 pt-5 w-100 mx-0">
-          <div className="col-12 col-md-6 p-2 p-md-3 d-flex justify-content-center align-items-center">
+          <div className="col-12 col-lg-6 p-2 p-md-3 d-flex justify-content-center align-items-center">
             <div className="contact-img-box">
               <img
                 src="/imgs/contact-us.svg"
@@ -32,8 +32,8 @@ const ContactPage = () => {
             </div>
           </div>
           {/* contact list */}
-          <div className="col-12 col-md-6 p-2 p-md-3 d-flex justify-content-center align-items-center">
-            <div className="contact-list mt-5 pt-4 mt-md-0 pt-md-0">
+          <div className="col-12 col-lg-6 p-2 p-md-3 d-flex justify-content-center align-items-center">
+            <div className="contact-list mt-5 pt-4 mt-lg-0 pt-md-0">
               <ContactList
                 icon={<FaPhoneAlt />}
                 text="(205) 555-0100"
@@ -79,8 +79,8 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-        <div className="text-center mt-3 mb-5 pb-5">
-          <PrimaryButton btnSize="btn-big" classList="btn-radius">
+        <div className="text-center mt-4 mb-5 pb-5">
+          <PrimaryButton btnSize="btn-medium" classList="btn-radius">
             Submit
           </PrimaryButton>
         </div>
@@ -96,7 +96,7 @@ const ContactPage = () => {
         }
 
         .contact-box {
-          -radius: 10px;
+          border-radius: 10px;
           box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.05);
         }
 
@@ -105,12 +105,8 @@ const ContactPage = () => {
             width: 95% !important;
           }
         }
-
-        .contact-img-box {
-          max-width: 390px;
-        }
         .contact-img {
-          max-width: 100% !important;
+          width: 100% !important;
         }
         .contact-list {
           max-width: 390px;
@@ -118,7 +114,7 @@ const ContactPage = () => {
 
         .input-main-box {
           width: 95% !important;
-          max-width: 470px;
+          max-width: 510px;
         }
       `}</style>
     </section>

@@ -37,7 +37,7 @@ const MyCart = () => {
             <div className="d-flex justify-content-between align-items-center">
               <Heading
                 title="My Cart"
-                classList="heading-primary-lg text-capitalize"
+                classList="heading-primary-lg text-capitalize mb-0"
               />
               <Link href="/checkout-page">
                 <a>

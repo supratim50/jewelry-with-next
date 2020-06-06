@@ -15,7 +15,7 @@ const ProductPage = () => {
         <script src="/assets/js/swiper-custom.js"></script>
       </Head>
       <section id="product-show">
-        <div className="container pb-5">
+        <div className="container">
           <div className="row position-relative">
             {/* <!-- product image --> */}
             <div className="col-12 col-md-6">

@@ -3,7 +3,7 @@ const Tag = ({ active }) => {
     <div
       className={`tag ${
         active ? "active" : null
-      } bg-light-grey font-weight-bold py-2 py-md-3 px-2 px-md-4 d-flex justify-content-center align-items-center mr-4`}
+      } bg-light-grey font-weight-bold py-2 px-2 px-md-3 d-flex justify-content-center align-items-center mr-md-4 mr-3`}
     >
       <p className="paragraph-text mb-0">Tag 1</p>
       <a

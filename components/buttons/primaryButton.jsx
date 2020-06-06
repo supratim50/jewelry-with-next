@@ -19,6 +19,9 @@ const PrimaryButton = ({ children, btnSize, classList }) => {
           .btn-big {
             padding: 14px 70px !important;
           }
+          .btn-medium {
+            padding: 14px 63px !important;
+          }
 
           @media screen and (max-width: 567px) {
             .btn-big {

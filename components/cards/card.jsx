@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const CardOne = ({ imageName, heading, subHeading }) => {
+const Card = ({ imageName, heading, subHeading }) => {
   return (
     <>
       <a href="#" className="text-decoration-none">
@@ -12,10 +12,10 @@ const CardOne = ({ imageName, heading, subHeading }) => {
               alt="Card image cap"
             />
             <div className="image-overflow d-flex flex-column justify-content-center align-items-center">
-              <h1 className="heading heading-primary text-secondary text-center">
+              <h1 className="heading big-heading text-secondary text-center">
                 {heading}
               </h1>
-              <p className="paragraph-text text-secondary text-center mb-0">
+              <p className="paragraph-text-lg text-secondary text-center mb-0">
                 {subHeading}
               </p>
             </div>
@@ -66,4 +66,4 @@ const CardOne = ({ imageName, heading, subHeading }) => {
   );
 };
 
-export default CardOne;
+export default Card;

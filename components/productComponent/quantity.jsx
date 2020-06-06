@@ -32,7 +32,7 @@ const Quantity = ({ quantityNum }) => {
         </button>
 
         {/* <!-- paragraph text --> */}
-        <div className="px-2 quantity font-weight-bold d-flex justify-content-center align-items-center border-0 bg-light-grey-2">
+        <div className="px-3 quantity font-weight-bold d-flex justify-content-center align-items-center border-0 bg-light-grey-2">
           <p className="paragraph-text mb-0">{quantity}</p>
         </div>
 
@@ -48,9 +48,6 @@ const Quantity = ({ quantityNum }) => {
         </button>
       </div>
       <style jsx>{`
-        .quantity {
-          min-width: 90px;
-        }
         .quantity-box {
           border-radius: 20px;
         }
