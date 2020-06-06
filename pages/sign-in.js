@@ -3,6 +3,7 @@ import Link from "next/link";
 import Input from "../components/input/input";
 import PrimaryButton from "../components/buttons/primaryButton";
 import SocialLoginIcon from "../components/socialLogin/socialLogin";
+import AuthLayout from "../components/layouts/authLayout";
 
 const SignInPage = () => {
   return (
@@ -83,4 +84,5 @@ const SignInPage = () => {
   );
 };
 
+SignInPage.Layout = AuthLayout;
 export default SignInPage;

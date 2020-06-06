@@ -1,5 +1,6 @@
 import Input from "../components/input/input";
 import PrimaryButton from "../components/buttons/primaryButton";
+import AuthLayout from "../components/layouts/authLayout";
 
 const ForgotPassword = () => {
   return (
@@ -84,4 +85,5 @@ const ForgotPassword = () => {
   );
 };
 
+ForgotPassword.Layout = AuthLayout;
 export default ForgotPassword;
