@@ -31,11 +31,11 @@ const ColorPalat = () => {
         <FiFeather />
       </div>
 
-      <div className="d-inline-block">
+      <div className="d-inline-block colors-box">
         {colors.map(({ id, color }) => (
           <div
             key={id}
-            className="color-btn p-1 rounded-circle d-inline-block border text-center ml-2 ml-md-3 border"
+            className="color-box p-1 rounded-circle d-inline-block border text-center ml-2 ml-md-3 border"
           >
             <div
               className={`color rounded-circle p-1 d-inline-block border text-center border ${color}`}
@@ -73,6 +73,22 @@ const ColorPalat = () => {
         .color {
           width: 100%;
           height: 100%;
+        }
+
+        .color-box {
+          width: 43px !important;
+          height: 43px !important;
+        }
+
+        @media screen and (max-width: 991px) {
+          .color-box {
+            width: 34px !important;
+            height: 34px !important;
+          }
+        }
+
+        .colors-box {
+          height: 100% !important;
         }
 
          {

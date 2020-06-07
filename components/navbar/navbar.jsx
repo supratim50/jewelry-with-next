@@ -284,7 +284,13 @@ const NavBar = () => {
           z-index: 10000;
         }
 
-        @media screen and (max-width: 1023px) {
+        @media screen and (max-width: 992px) {
+          .side-drawer {
+            width: 58vw;
+          }
+        }
+
+        @media screen and (max-width: 575px) {
           .side-drawer {
             width: 85vw;
           }

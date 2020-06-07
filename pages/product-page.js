@@ -39,7 +39,7 @@ const ProductPage = () => {
                   </h1>
                   <p className="paragraph-text text-muted mb-0">Gold Plated</p>
                 </div>
-                <div className="mt-md-3 d-flex flex-column flex-md-row justify-content-start align-items-center">
+                <div className="mt-md-3 d-flex flex-column flex-md-row justify-content-start align-items-end align-items-md-center">
                   <h1 className="offer-price heading heading-primary text-primary mb-1">
                     $&nbsp;11.12
                   </h1>
