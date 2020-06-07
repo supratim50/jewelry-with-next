@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="col-12 col-md-6 border-right">
             <div className="row">
               {/* <!-- links  --> */}
-              <div className="col-6 col-md-3 mt-3 mt-md-0">
+              <div className="col-6 col-lg-3 mt-3 mt-md-0">
                 <p className="paragraph-text-lg font-weight-bold text-dark-grey">
                   About
                 </p>
@@ -29,7 +29,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-6 col-md-3 mt-3 mt-md-0">
+              <div className="col-6 col-lg-3 mt-3 mt-md-0">
                 <p className="paragraph-text-lg font-weight-bold text-dark-grey">
                   Help
                 </p>
@@ -64,7 +64,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-6 col-md-3 mt-3 mt-md-0">
+              <div className="col-6 col-lg-3 mt-3 mt-lg-0">
                 <p className="paragraph-text-lg font-weight-bold text-dark-grey">
                   Policy
                 </p>
@@ -99,7 +99,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-6 col-md-3 mt-3 mt-md-0">
+              <div className="col-6 col-lg-3 mt-3 mt-lg-0">
                 <p className="paragraph-text-lg font-weight-bold text-dark-grey">
                   Social
                 </p>
